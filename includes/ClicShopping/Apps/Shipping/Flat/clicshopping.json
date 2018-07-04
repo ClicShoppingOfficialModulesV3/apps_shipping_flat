@@ -1,0 +1,24 @@
+{
+	"title":	"Flat App",
+	"app":		"Flat",
+	"vendor":	"Shipping",
+	"version":	"1.0.0",
+	"req_core_version":	"3.0",
+	"license":	"GPL-2",
+	"authors": [
+		{
+			"name":		"ClicShopping",
+      "company":	"Innov-Concept Consulting",
+			"email":	   "admin@clicshopping.org",
+			"website":	"https://www.clicshopping.org"
+		}
+	],
+	"modules": {
+		"Shipping": {
+			"FL":	"Module\\Shipping\\FL"
+		}
+	},
+	"routes": {
+		"ClicShoppingAdmin":	"Sites\\ClicShoppingAdmin\\Pages\\Home"
+	}
+}

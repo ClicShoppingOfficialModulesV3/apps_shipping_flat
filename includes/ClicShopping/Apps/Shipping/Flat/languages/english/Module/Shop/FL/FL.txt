@@ -1,0 +1,5 @@
+module_flat_text_title = Shipping by Flat
+module_flat_short_title = Shipping by to Flat
+module_flat_public_title = Shipping by oo Flat
+module_flat_title = Shipping by Flat
+module_flat_text_way = Best Way

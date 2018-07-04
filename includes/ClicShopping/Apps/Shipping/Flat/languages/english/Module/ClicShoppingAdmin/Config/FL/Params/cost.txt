@@ -1,0 +1,2 @@
+cfg_flat_cost_title = Delivery Cost
+cfg_flat_cost_desc = The delivery cost will be multiplied by the number of flats in the order using this method

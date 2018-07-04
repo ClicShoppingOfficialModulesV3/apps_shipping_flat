@@ -1,0 +1,6 @@
+cfg_flat_status_title = Status
+cfg_flat_status_description = Set True to enable or not the module
+
+cfg_flat_status_true = True
+cfg_flat_status_false = False
+
