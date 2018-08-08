@@ -4,6 +4,7 @@
   use ClicShopping\OM\Registry;
 
   $CLICSHOPPING_Flat = Registry::get('Flat');
+  $CLICSHOPPING_MessageStack = Registry::get('MessageStack');
 
   if ($CLICSHOPPING_MessageStack->exists('Flat')) {
     echo $CLICSHOPPING_MessageStack->get('Flat');
