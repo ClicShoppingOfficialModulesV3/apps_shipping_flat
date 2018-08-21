@@ -1,18 +1,20 @@
 <?php
-/*
- * sort_order.php
- * @copyright Copyright 2008 - http://www.innov-concept.com
- * @Brand : ClicShopping(Tm) at Inpi all right Reserved
- * @license GPL 2 License & MIT Licencse
- 
-*/
+/**
+ *
+ *  @copyright 2008 - https://www.clicshopping.org
+ *  @Brand : ClicShopping(Tm) at Inpi all right Reserved
+ *  @Licence GPL 2 & MIT
+ *  @licence MIT - Portion of osCommerce 2.4
+ *
+ *
+ */
 
   namespace ClicShopping\Apps\Shipping\Flat\Module\ClicShoppingAdmin\Config\FL\Params;
 
   class sort_order extends \ClicShopping\Apps\Shipping\Flat\Module\ClicShoppingAdmin\Config\ConfigParamAbstract {
 
     public $default = '0';
-    public $app_configured = true;
+    public $app_configured = false;
     public $sort_order = 300;
 
     protected function init() {
