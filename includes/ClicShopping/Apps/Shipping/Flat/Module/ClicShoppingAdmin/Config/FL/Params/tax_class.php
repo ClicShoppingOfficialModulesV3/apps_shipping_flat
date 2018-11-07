@@ -18,11 +18,18 @@
     public $sort_order = 50;
     public $set_func = 'clic_cfg_set_tax_classes_pull_down_menu';
 //    public $use_func = 'clic_cfg_use_get_tax_class_title';
-
+    protected $app;
 
     protected function init() {
       $this->title = $this->app->getDef('cfg_flat_tax_class_title');
       $this->description = $this->app->getDef('cfg_flat_tax_class_desc');
+
+      if (!Registry::exists('Flat')) {
+        Registry::set('Flat', new FlatApp());
+      }
+
+      $this->app = Registry::get('Flat');
+      $this->app->loadDefinitions('Module/Sites/ClicShoppingAdmin/main');
     }
 
     public function getInputField() {
