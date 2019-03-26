@@ -12,6 +12,7 @@
   namespace ClicShopping\Apps\Shipping\Flat\Module\ClicShoppingAdmin\Config\FL\Params;
 
   use ClicShopping\OM\HTML;
+  use ClicShopping\OM\Registry;
 
   class tax_class extends \ClicShopping\Apps\Shipping\Flat\Module\ClicShoppingAdmin\Config\ConfigParamAbstract {
     public $default = '';
