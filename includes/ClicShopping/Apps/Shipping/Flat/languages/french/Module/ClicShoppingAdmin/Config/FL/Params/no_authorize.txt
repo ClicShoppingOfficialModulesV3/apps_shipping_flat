@@ -1,0 +1,4 @@
+cfg_flat_no_authorize_title = Souhaitez-vous afficher les frais d'expédition pour les clients B2C ?
+cfg_flat_no_authorize_desc = Afficher les frais d'expédition pour les clients B2C ?
+cfg_flat_no_authorize_true = True
+cfg_flat_no_authorize_false = False

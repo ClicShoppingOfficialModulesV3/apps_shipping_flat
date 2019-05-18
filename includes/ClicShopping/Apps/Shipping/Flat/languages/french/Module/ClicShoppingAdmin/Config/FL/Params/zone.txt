@@ -1,0 +1,4 @@
+cfg_flat_zone_title = Zone d'expédition
+cfg_flat_zone_desc = Sélectionner votre zone d'expédition géographique concernant ce module.
+
+cfg_flat_zone_none = -- Aucune --

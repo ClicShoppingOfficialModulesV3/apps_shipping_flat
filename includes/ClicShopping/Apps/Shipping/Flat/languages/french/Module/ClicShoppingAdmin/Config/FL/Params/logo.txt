@@ -1,0 +1,2 @@
+cfg_flat_logo_title = Logo d'expédition
+cfg_flat_logo_desc = S'il vous plaît, indiquez le fichier du logo avec l'extension (.gif, .jpg, etc...).<br /><strong>Note :</strong></font><br />Le logo doit être dans le répertoire sources/images/logos/shipping/

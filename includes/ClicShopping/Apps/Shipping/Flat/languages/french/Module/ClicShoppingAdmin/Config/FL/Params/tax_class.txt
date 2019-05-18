@@ -1,0 +1,2 @@
+cfg_flat_tax_class_title = Classe de Taxes
+cfg_colirap_tax_class_desc = Sélectionner la classe de taxes que vous souhaitez appliquer = Sélectionner la classe de taxes que vous souhaitez appliquer

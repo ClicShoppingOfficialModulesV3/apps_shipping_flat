@@ -1,0 +1,4 @@
+cfg_flat_sort_order_title = Ordre de tri
+cfg_flat_sort_order_description = Ordre de tri du module affiché dans la liste des méthodes d'expédition disponibles (le plus bas s'affiche en premier).
+
+

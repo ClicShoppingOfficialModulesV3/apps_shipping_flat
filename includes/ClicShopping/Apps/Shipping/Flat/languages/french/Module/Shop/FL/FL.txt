@@ -1,0 +1,5 @@
+module_flat_text_title = Expédition par Frais fixes
+module_flat_short_title = Expédition par to Frais fixes
+module_flat_public_title = Expédition par oo Frais fixes
+module_flat_title = Expédition par Frais fixes
+module_flat_text_way = meilleur chemin
