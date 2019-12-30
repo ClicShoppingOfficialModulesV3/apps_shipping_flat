@@ -2,5 +2,5 @@ cfg_flat_status_title = Statut
 cfg_flat_status_description = Sélectionner True pour activer ce module ou False pour le désactiver
 
 cfg_flat_status_true = True
-cfg_flat_status_true = False
+cfg_flat_status_false = False
 
