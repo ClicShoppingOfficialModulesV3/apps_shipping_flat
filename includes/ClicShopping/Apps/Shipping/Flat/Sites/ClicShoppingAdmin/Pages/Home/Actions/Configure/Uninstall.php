@@ -26,7 +26,7 @@
       $m = Registry::get('FlatAdminConfig' . $current_module);
       $m->uninstall();
 
-      $CLICSHOPPING_MessageStack->add($CLICSHOPPING_Flat->getDef('alert_module_uninstall_success'), 'success', 'Flat');
+      $CLICSHOPPING_MessageStack->add($CLICSHOPPING_Flat->getDef('alert_module_uninstall_success'), 'success');
 
       $CLICSHOPPING_Flat->redirect('Configure&module=' . $current_module);
     }

@@ -22,8 +22,8 @@
 
   $CLICSHOPPING_Flat_Config = Registry::get('FlatAdminConfig' . $current_module);
 
-  if ($CLICSHOPPING_MessageStack->exists('Flat')) {
-    echo $CLICSHOPPING_MessageStack->get('Flat');
+  if ($CLICSHOPPING_MessageStack->exists('main')) {
+    echo $CLICSHOPPING_MessageStack->get('main');
   }
 ?>
 <div class="contentBody">

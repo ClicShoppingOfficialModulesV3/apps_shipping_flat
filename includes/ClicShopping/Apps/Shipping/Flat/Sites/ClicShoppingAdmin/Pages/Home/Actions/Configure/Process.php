@@ -32,7 +32,7 @@
         }
       }
 
-      $CLICSHOPPING_MessageStack->add($CLICSHOPPING_Flat->getDef('alert_cfg_saved_success'), 'success', 'Flat');
+      $CLICSHOPPING_MessageStack->add($CLICSHOPPING_Flat->getDef('alert_cfg_saved_success'), 'success');
 
       $CLICSHOPPING_Flat->redirect('Configure&module=' . $current_module);
     }

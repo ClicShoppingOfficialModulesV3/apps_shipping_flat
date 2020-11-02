@@ -19,14 +19,20 @@
 
   class FL implements \ClicShopping\OM\Modules\ShippingInterface
   {
-
     public $code;
     public $title;
     public $description;
-    public $enabled;
-    public $icon;
+    public $public_title;
+    public $sort_order = 0;
+    public $enabled = false;
     public $app;
+    protected $currency;
+    public $signature;
+    protected $api_version;
+    public $group;
+    public $icon;
     public $quotes;
+    public $tax_class;
 
     public function __construct()
     {
@@ -42,7 +48,6 @@
 
       $this->app = Registry::get('Flat');
       $this->app->loadDefinitions('Module/Shop/FL/FL');
-
 
       $this->signature = 'Flat|' . $this->app->getVersion() . '|1.0';
       $this->api_version = $this->app->getApiVersion();
@@ -89,7 +94,8 @@
       if (($this->enabled === true) && ((int)CLICSHOPPING_APP_FLAT_FL_ZONE > 0)) {
         $check_flag = false;
 
-        $Qcheck = $this->app->db->get('zones_to_geo_zones', 'zone_id', ['geo_zone_id' => (int)CLICSHOPPING_APP_FLAT_FL_ZONE,
+        $Qcheck = $this->app->db->get('zones_to_geo_zones', 'zone_id', [
+          'geo_zone_id' => (int)CLICSHOPPING_APP_FLAT_FL_ZONE,
           'zone_country_id' => $CLICSHOPPING_Order->delivery['country']['id']
         ],
           'zone_id'
@@ -114,14 +120,14 @@
       $CLICSHOPPING_Tax = Registry::get('Tax');
       $CLICSHOPPING_Template = Registry::get('Template');
 
-      $this->quotes = ['id' => $this->app->vendor . '\\' . $this->app->code . '\\' . $this->code,
+      $this->quotes = [
+        'id' => $this->app->vendor . '\\' . $this->app->code . '\\' . $this->code,
         'module' => $this->app->getDef('module_flat_text_title'),
         'methods' => [array('id' => $this->code,
-          'title' => $this->app->getDef('module_flat_text_way'),
-          'cost' => (float)CLICSHOPPING_APP_FLAT_FL_COST
-
-        )
-        ]
+                            'title' => $this->app->getDef('module_flat_text_way'),
+                            'cost' => (float)CLICSHOPPING_APP_FLAT_FL_COST
+                            )
+                     ]
       ];
 
       if ($this->tax_class > 0) {
