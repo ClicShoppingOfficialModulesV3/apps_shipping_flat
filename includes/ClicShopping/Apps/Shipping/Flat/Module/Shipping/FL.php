@@ -55,7 +55,7 @@
       $this->code = 'FL';
       $this->title = $this->app->getDef('module_flat_title');
       $this->public_title = $this->app->getDef('module_flat_public_title');
-      $this->sort_order = defined('CLICSHOPPING_APP_FLAT_FL_SORT_ORDER') ? CLICSHOPPING_APP_FLAT_FL_SORT_ORDER : 0;
+      $this->sort_order = \defined('CLICSHOPPING_APP_FLAT_FL_SORT_ORDER') ? CLICSHOPPING_APP_FLAT_FL_SORT_ORDER : 0;
 
 // Activation module du paiement selon les groupes B2B
       if ($CLICSHOPPING_Customer->getCustomersGroupID() != 0) {
@@ -67,7 +67,7 @@
           }
         }
       } else {
-        if (defined('CLICSHOPPING_APP_FLAT_FL_NO_AUTHORIZE') && CLICSHOPPING_APP_FLAT_FL_NO_AUTHORIZE == 'True' && $CLICSHOPPING_Customer->getCustomersGroupID() == 0) {
+        if (\defined('CLICSHOPPING_APP_FLAT_FL_NO_AUTHORIZE') && CLICSHOPPING_APP_FLAT_FL_NO_AUTHORIZE == 'True' && $CLICSHOPPING_Customer->getCustomersGroupID() == 0) {
           if ($CLICSHOPPING_Customer->getCustomersGroupID() == 0) {
             if (CLICSHOPPING_APP_FLAT_FL_STATUS == 'True') {
               $this->enabled = true;
@@ -78,15 +78,15 @@
         }
       }
 
-      if (defined('CLICSHOPPING_APP_FLAT_FL_TAX_CLASS')) {
+      if (\defined('CLICSHOPPING_APP_FLAT_FL_TAX_CLASS')) {
         if ($CLICSHOPPING_Customer->getCustomersGroupID() != 0) {
           if (B2BCommon::getTaxUnallowed($this->code) || !$CLICSHOPPING_Customer->isLoggedOn()) {
-            $this->tax_class = defined('CLICSHOPPING_APP_FLAT_FL_TAX_CLASS') ? CLICSHOPPING_APP_FLAT_FL_TAX_CLASS : 0;
+            $this->tax_class = \defined('CLICSHOPPING_APP_FLAT_FL_TAX_CLASS') ? CLICSHOPPING_APP_FLAT_FL_TAX_CLASS : 0;
 
           }
         } else {
           if (B2BCommon::getTaxUnallowed($this->code)) {
-            $this->tax_class = defined('CLICSHOPPING_APP_FLAT_FL_TAX_CLASS') ? CLICSHOPPING_APP_FLAT_FL_TAX_CLASS : 0;
+            $this->tax_class = \defined('CLICSHOPPING_APP_FLAT_FL_TAX_CLASS') ? CLICSHOPPING_APP_FLAT_FL_TAX_CLASS : 0;
           }
         }
       }
@@ -141,14 +141,14 @@
         $this->icon = '';
       }
 
-      if (!is_null($this->icon)) $this->quotes['icon'] = '&nbsp;&nbsp;&nbsp;' . $this->icon;
+      if (!\is_null($this->icon)) $this->quotes['icon'] = '&nbsp;&nbsp;&nbsp;' . $this->icon;
 
       return $this->quotes;
     }
 
     public function check()
     {
-      return defined('CLICSHOPPING_APP_FLAT_FL_STATUS') && (trim(CLICSHOPPING_APP_FLAT_FL_STATUS) != '');
+      return \defined('CLICSHOPPING_APP_FLAT_FL_STATUS') && (trim(CLICSHOPPING_APP_FLAT_FL_STATUS) != '');
     }
 
     public function install()
