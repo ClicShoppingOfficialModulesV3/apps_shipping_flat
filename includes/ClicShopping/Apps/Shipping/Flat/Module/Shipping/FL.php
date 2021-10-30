@@ -19,13 +19,13 @@
 
   class FL implements \ClicShopping\OM\Modules\ShippingInterface
   {
-    public $code;
+    public string $code;
     public $title;
     public $description;
     public $public_title;
-    public $sort_order = 0;
+    public ?int $sort_order = 0;
     public $enabled = false;
-    public $app;
+    public mixed $app;
     protected $currency;
     public $signature;
     protected $api_version;
