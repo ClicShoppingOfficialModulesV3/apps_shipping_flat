@@ -1,2 +1,2 @@
 cfg_flat_cost_title = Cout d'expédition
-cfg_flat_cost_desc = Le coût de livraison sera multiplié par le nombre de produits dans la commande en utilisant cette méthode
+cfg_flat_cost_desc = Le coût de livraison sera un cout fixe pour tous les produits
